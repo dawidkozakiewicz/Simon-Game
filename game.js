@@ -18,7 +18,6 @@ function nextSequence() {
   level++;
   $("h1").text("level:" + level);
   userClickedPattern = [];
-  console.log("Komputer wylosował: " + gamePattern);
 }
 
 document.addEventListener("keydown", function () {
@@ -29,7 +28,6 @@ document.addEventListener("keydown", function () {
     gamePattern = [];
     nextSequence();
   } else {
-    console.log("nie ciś");
   }
 });
 
@@ -78,8 +76,6 @@ for (var index = 0; index < buttons.length; index++) {
         console.log("error");
         break;
     }
-    console.log("user: " + userClickedPattern);
-    console.log("computer: " + gamePattern);
 
     function checkCompliance() {
       var isTheSame;
@@ -101,12 +97,6 @@ for (var index = 0; index < buttons.length; index++) {
         }
       }
     }
-    console.log(
-      "Komputer wylosował: " +
-        gamePattern +
-        " a stan twojej tablicy: " +
-        userClickedPattern
-    );
     checkCompliance();
   });
 }
