@@ -90,6 +90,7 @@ for (var index = 0; index < buttons.length; index++) {
           $("h1").text("Game Over, Press Any Key to Restart");
           var wrong = new Audio("./sounds/wrong.mp3");
           wrong.play();
+          level = 0;
         } else {
           if (gamePattern.length === userClickedPattern.length) {
             nextSequence();
